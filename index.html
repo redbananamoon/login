@@ -6,14 +6,14 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 20px;
             margin: 0;
             background-color: #001f3f; /* Deep blue background */
             color: white;
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Move content to the top */
             align-items: center;
         }
         h1 {
@@ -30,10 +30,10 @@
             padding: 15px;
             margin: 15px 0;
             width: 90%;
-            max-width: 400px;
+            max-width: 600px; /* Increase max width */
+            box-sizing: border-box;
             border: none;
             border-radius: 8px;
-            box-sizing: border-box;
         }
         input:focus {
             outline: none;
@@ -58,6 +58,8 @@
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px; /* Center form */
         }
     </style>
 </head>
