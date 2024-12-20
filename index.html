@@ -2,17 +2,56 @@
 <html>
 <head>
     <title>Test Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        label {
+            font-size: 1.5em;
+        }
+        input {
+            font-size: 1.5em;
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 400px;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Test Login Page</h1>
+    <h1>Test Login Page</h1>
     <form action="#" method="post">
-        <label for="username">Username:</label>
+        <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" autocomplete="username"><br><br>
 
-        <label for="password">Password:</label>
+        <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" autocomplete="current-password"><br><br>
+
+        <label>
+            <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password
+        </label><br><br>
 
         <button type="submit">Login</button>
     </form>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
 </body>
 </html>
